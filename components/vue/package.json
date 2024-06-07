@@ -1,0 +1,10 @@
+{
+  "name": "@components/vue",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "author": "ShineShao <xiaoshaoqq@gmail.com>",
+  "scripts": {},
+  "keywords": [],
+  "license": "MIT"
+}
