@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
 import App from './App';
-import '@/assets/scss/index.scss';
+import './index.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 createRoot(document.querySelector('#root')!).render(

@@ -2,7 +2,6 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { renderWithQiankun, qiankunWindow } from '@/plugins/qiankun/helper';
 import App from './App';
-import '@/assets/scss/index.scss';
 
 let root: any = null;
 

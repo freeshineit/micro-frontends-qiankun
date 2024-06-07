@@ -31,7 +31,7 @@ const isRootPage = computed(() => route.path === '/');
   </div>
 </template>
 
-<style lang="scss" scoped>
+<!-- <style lang="scss" scoped>
 .layout {
   height: 100%;
   .layout-header {
@@ -61,4 +61,4 @@ const isRootPage = computed(() => route.path === '/');
     }
   }
 }
-</style>
+</style> -->
