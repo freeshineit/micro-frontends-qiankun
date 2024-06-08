@@ -1,7 +1,6 @@
 import { type App as TApp, createApp } from 'vue';
 import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/es/helper';
 import router from '@/router';
-import '@/assets/scss/index.scss';
 import App from './App.vue';
 
 let app: TApp;

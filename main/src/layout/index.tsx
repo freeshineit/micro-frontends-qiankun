@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { useAppSelector } from '@/store';
 import { type TMenuList } from '@/types';
 import menusList from '@/mock/menusList';
+import styles from './layout.module.scss';
 
 const reactSubApps = ['reactApp'];
 const vueSubApps = ['vueApp'];
@@ -21,25 +22,25 @@ const Layout = () => {
   }
 
   return (
-    <div className="layout">
-      <div className="layout-header">
+    <div className={styles.layout}>
+      <div className={styles['layout-header']}>
         {menusList.map((item, index) => (
           <Link key={item?.id || index} to={item.path} style={{ marginRight: '15px' }}>
             {item.name}
           </Link>
         ))}
       </div>
-      <div className="layout-container">
-        <div className="layout-left">
+      <div className={styles['layout-container']}>
+        <div className={styles['layout-left']}>
           {currentMenus?.map((item) => (
             <Link to={item.path} key={item.path}>
               {item.name}
             </Link>
           ))}
         </div>
-        <div className="layout-right">
+        <div className={styles['layout-right']}>
           <button>主应用(micro-main)按钮</button>
-          {microAppIsLoading && <div className="layout-loading">loading...</div>}
+          {microAppIsLoading && <div className={styles['layout-loading']}>loading...</div>}
           <Outlet />
         </div>
       </div>
