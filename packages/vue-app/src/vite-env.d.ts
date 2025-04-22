@@ -7,6 +7,8 @@ declare module '*.vue' {
   export default component;
 }
 
+declare module 'ezuikit-js';
+
 interface Window {
   $RefreshReg$: () => void;
   $RefreshSig$: () => (type: any) => any;

@@ -1,5 +1,6 @@
 /// <reference types="vite/client" />
 
+declare module 'ezuikit-js';
 interface Window {
   $RefreshReg$: () => void;
   $RefreshSig$: () => (type: any) => any;

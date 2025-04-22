@@ -79,8 +79,15 @@ export const initQiankun = (props?: TInitQiankun) => {
   // 启动 qiankun
   start({
     sandbox: {
+      // https://qiankun.umijs.org/zh/api
       // strictStyleIsolation: true,
       // experimentalStyleIsolation: true,
+    },
+    // https://qiankun.umijs.org/zh/api#loadmicroappapp-configuration
+    // 指定部分特殊的动态加载的微应用资源（css/js) 不被 qiankun 劫持处理
+    excludeAssetFilter: (assetUrl: string) => {
+      // 过滤文件
+      return true;
     },
   });
   // 第一个子应用加载完毕回调
