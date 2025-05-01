@@ -65,5 +65,6 @@ cd docker
 
 ## 部署到docker的nginx容器中
 ## http://localhost:8000
-docker-compose up -d
+## docker-compose up -d
+docker compose up -d
 ```
