@@ -6,7 +6,7 @@ const mainRoutes = {
   children: [
     {
       path: '/*',
-      element: <div id="subapp-viewport"></div>,
+      element: <div id="subapp-viewport" />,
     },
     { path: '*', element: null },
   ],

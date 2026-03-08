@@ -1,13 +1,5 @@
-/* eslint-disable @typescript-eslint/promise-function-async */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable no-console */
-import {
-  registerMicroApps,
-  start,
-  addGlobalUncaughtErrorHandler,
-  setDefaultMountApp,
-  runAfterFirstMounted,
-} from 'qiankun';
+import { registerMicroApps, start, addGlobalUncaughtErrorHandler, setDefaultMountApp, runAfterFirstMounted } from 'qiankun';
 import { microApps } from '@/microApp/config';
 import { type TInitQiankun } from '@/microApp/types';
 import { store } from '@/store';
@@ -16,7 +8,7 @@ import { commonActions } from '@/store/common';
 // 注册微应用
 export const registerApp = (props: any) => {
   // 注册子应用信息【合并 props 属性】
-  const appsConfig = microApps.map((item) => {
+  const appsConfig = microApps.map(item => {
     return {
       ...item,
       props: {
@@ -29,41 +21,41 @@ export const registerApp = (props: any) => {
   // 注册子应用
   registerMicroApps(appsConfig, {
     // qiankun 生命周期钩子 - 加载前
-    beforeLoad: (app) =>
-      new Promise((resolve) => {
+    beforeLoad: app =>
+      new Promise(resolve => {
         console.log('before load ===', app.name);
         resolve('beforeLoad');
       }),
     // qiankun 生命周期钩子 - 挂载前
-    beforeMount: (app) =>
-      new Promise((resolve) => {
+    beforeMount: app =>
+      new Promise(resolve => {
         console.log('before mount ===', app.name);
         resolve('beforeMount');
       }),
     // qiankun 生命周期钩子 - 挂载后
-    afterMount: (app) => {
-      return new Promise((resolve) => {
+    afterMount: app => {
+      return new Promise(resolve => {
         console.log('after mount ===', app.name);
         store.dispatch(commonActions.setMicroAppIsLoading(false));
         resolve('afterMount');
       });
     },
     // qiankun 生命周期钩子 - 卸载前
-    beforeUnmount: (app) =>
-      new Promise((resolve) => {
+    beforeUnmount: app =>
+      new Promise(resolve => {
         console.log('before unmount ===', app.name);
         resolve('beforeUnmount');
       }),
     // qiankun 生命周期钩子 - 卸载后
-    afterUnmount: (app) =>
-      new Promise((resolve) => {
+    afterUnmount: app =>
+      new Promise(resolve => {
         console.log('after unmount ===', app.name);
         resolve('afterUnmount');
       }),
   });
 
   // 添加全局的未捕获异常处理器
-  addGlobalUncaughtErrorHandler((e) => {
+  addGlobalUncaughtErrorHandler(e => {
     console.error('微前端发生异常了, 请排查微应用相关配置是否正确：', e);
   });
 };
