@@ -4,12 +4,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: [
-      'tsconfig.json',
-      'tsconfig.node.json',
-      './main/tsconfig.json',
-      './packages/*/tsconfig.json',
-    ],
+    project: ['tsconfig.json', 'tsconfig.node.json', './main/tsconfig.json', './packages/*/tsconfig.json'],
   },
   globals: {
     logger: true,
