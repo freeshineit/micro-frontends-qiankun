@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { type TMicroApps } from './types';
 
 // const isDev = process.env.NODE_DEV === 'development'

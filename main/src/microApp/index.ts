@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/promise-function-async */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable no-console */
 import { registerMicroApps, start, addGlobalUncaughtErrorHandler, setDefaultMountApp, runAfterFirstMounted } from 'qiankun';
 import { microApps } from '@/microApp/config';
