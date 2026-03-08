@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { Link, Outlet } from 'react-router-dom';
 import { useAppSelector } from '@/store';
 import { type TMenuList } from '@/types';

@@ -14,9 +14,9 @@
     "dev:vue": "pnpm run --filter vue-app dev",
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
-    "fix": "eslint --fix **/*.{ts,tsx,js,jsx,vue}",
-    "lint": "eslint --ext **/*.{ts,tsx,js,jsx,vue}",
-    "fmt": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,cjs,vue}\""
+    "fix": "eslint --fix **/*.{ts,tsx,vue}",
+    "lint": "eslint --ext **/*.{ts,tsx,vue}",
+    "fmt": "prettier --write \"**/*.{ts,tsx,jsx,js,json,css,scss,cjs,vue}\""
   },
   "keywords": [
     "qiankun",
