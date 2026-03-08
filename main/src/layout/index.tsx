@@ -9,16 +9,16 @@ const reactSubApps = ['reactApp'];
 const vueSubApps = ['vueApp'];
 
 const Layout = () => {
-  const { currentApp, microAppIsLoading } = useAppSelector((state) => state.common);
+  const { currentApp, microAppIsLoading } = useAppSelector(state => state.common);
 
   let currentMenus: TMenuList = [];
 
   if (currentApp?.name && reactSubApps?.includes(currentApp?.name)) {
-    currentMenus = menusList.find((item) => item.path === '/reactApp')?.children || [];
+    currentMenus = menusList.find(item => item.path === '/reactApp')?.children || [];
   }
 
   if (currentApp?.name && vueSubApps?.includes(currentApp?.name)) {
-    currentMenus = menusList.find((item) => item.path === '/vueApp')?.children || [];
+    currentMenus = menusList.find(item => item.path === '/vueApp')?.children || [];
   }
 
   return (
@@ -32,7 +32,7 @@ const Layout = () => {
       </div>
       <div className={styles['layout-container']}>
         <div className={styles['layout-left']}>
-          {currentMenus?.map((item) => (
+          {currentMenus?.map(item => (
             <Link to={item.path} key={item.path}>
               {item.name}
             </Link>

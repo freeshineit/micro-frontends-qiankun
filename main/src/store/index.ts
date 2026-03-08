@@ -6,7 +6,7 @@ import { reducers, middlewares } from '@/store/reducers';
 
 export const store = configureStore({
   reducer: reducers,
-  middleware: (getDefaultMiddleware) =>
+  middleware: getDefaultMiddleware =>
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     getDefaultMiddleware().concat(...middlewares),
 });

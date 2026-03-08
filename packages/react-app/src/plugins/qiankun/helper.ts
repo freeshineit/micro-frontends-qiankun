@@ -1,7 +1,7 @@
 // reactRefresh 挂载全局变量实现热更新
 
 window.$RefreshReg$ = () => {};
-window.$RefreshSig$ = () => (type) => type;
+window.$RefreshSig$ = () => type => type;
 window.__vite_plugin_react_preamble_installed__ = true;
 
 export interface QiankunProps {

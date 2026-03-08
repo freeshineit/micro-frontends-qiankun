@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from '@/components/HelloWorld.vue';
-import vitePng from '@/assets/vite.svg'
-import vuePng from '@/assets/vue.svg'
+import vitePng from '@/assets/vite.svg';
+import vuePng from '@/assets/vue.svg';
 </script>
 
 <template>

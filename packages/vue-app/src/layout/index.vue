@@ -36,5 +36,3 @@ const isRootPage = computed(() => route.path === '/');
   text-align: center;
 }
 </style>
-
-

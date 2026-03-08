@@ -8,7 +8,7 @@ import { commonActions } from '@/store/common';
 // 初始化配置
 const useInitConfig = () => {
   const location = useLocation();
-  const { currentApp } = useAppSelector((state) => state.common);
+  const { currentApp } = useAppSelector(state => state.common);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -18,17 +18,13 @@ const useInitConfig = () => {
       const subAppName = regular.exec(location.pathname)?.[1];
       if (subAppName) {
         // 设置当前子应用
-        const micApp = microApps.find((item) => item.name === subAppName);
+        const micApp = microApps.find(item => item.name === subAppName);
         if (micApp && micApp.name !== currentApp?.name) {
           dispatch(commonActions.setCurrentApp(micApp));
         }
       }
     } catch (error) {
-      console.log(
-        '%c👉  error: ',
-        'background:#41b883;padding:1px; border-radius: 0 3px 3px 0;color: #fff',
-        error,
-      ); // 👈
+      console.log('%c👉  error: ', 'background:#41b883;padding:1px; border-radius: 0 3px 3px 0;color: #fff', error); // 👈
     }
   }, [currentApp, dispatch, location.pathname]);
 
