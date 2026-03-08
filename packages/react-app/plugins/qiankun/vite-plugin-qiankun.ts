@@ -39,7 +39,6 @@ const createQiankunHelper = (qiankunName: string) => `
   })(window);
 `;
 
-// eslint-disable-next-line no-unused-vars
 // const replaceSomeScript = ($: CheerioAPI, findStr: string, replaceStr: string = '') => {
 //   $('script').each((i, el) => {
 //     if ($(el).html()?.includes(findStr)) {
@@ -107,7 +106,7 @@ const htmlPlugin: PluginFn = (qiankunName, microOption = {}) => {
               const $ = cheerio.load(htmlStr);
               module2DynamicImport(
                 $,
-                // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
                 ($(`script[src=${base}@vite/client]`) as any)?.get?.(0),
               );
               // 由于 vite 的热更新机制，会在入口文件中注入一段代码，用于热更新
@@ -115,7 +114,7 @@ const htmlPlugin: PluginFn = (qiankunName, microOption = {}) => {
               entryScript.html(createEntry(entryScript.html()));
               htmlStr = $.html();
             }
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
             end(htmlStr, ...rest);
           };
           next();

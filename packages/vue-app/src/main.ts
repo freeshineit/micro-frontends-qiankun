@@ -9,7 +9,7 @@ function render(props: any) {
   const { container } = props;
   app = createApp(App);
   // 路由挂载
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
   app.use(router(props));
   const c = container ? container.querySelector('#app') : document.getElementById('app');
   app.mount(c);
